@@ -97,6 +97,10 @@ $white: #ffffff;
             height: 65vh;
             min-height: 300px;
             width: 90vw;
+            padding: 5px;
+            &__inputs {
+                padding: 10px;
+            }
         }
     }
 }
