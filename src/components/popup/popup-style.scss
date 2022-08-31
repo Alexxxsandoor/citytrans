@@ -27,7 +27,7 @@ $white: #ffffff;
         display: flex;
         flex-direction: column;
         height: 60vh;
-        width: 40vw;
+        width: 44vw;
         background: $white;
         animation: slips 1s forwards;
         &__header {
@@ -96,7 +96,7 @@ $white: #ffffff;
         .window {
             height: 65vh;
             min-height: 300px;
-            width: 80vw;
+            width: 90vw;
         }
     }
 }

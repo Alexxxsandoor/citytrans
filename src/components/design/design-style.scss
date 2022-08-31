@@ -177,6 +177,9 @@ $cross-color: #6b6b6b;
             transform: skew(40deg, 0deg);
         }
     }
+    .social {
+        bottom: 2%;
+    }
 }
 @media (max-width: 300px) {
     .design {
