@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/citytrans/static/css/main.2943624b.css",
+    "main.css": "/citytrans/static/css/main.522109a3.css",
     "main.js": "/citytrans/static/js/main.9a896e61.js",
     "static/media/bigIMG.png": "/citytrans/static/media/bigIMG.3804b4e8b93e9cad9a2d.png",
     "static/media/whatsapp.png": "/citytrans/static/media/whatsapp.29dd41c9009c90f690c6.png",
@@ -9,11 +9,11 @@
     "static/media/facebook.png": "/citytrans/static/media/facebook.8d51a55626e9bf107f8f.png",
     "static/media/mail.svg": "/citytrans/static/media/mail.a571d93915d0a1cf139b549ad89aed3f.svg",
     "index.html": "/citytrans/index.html",
-    "main.2943624b.css.map": "/citytrans/static/css/main.2943624b.css.map",
+    "main.522109a3.css.map": "/citytrans/static/css/main.522109a3.css.map",
     "main.9a896e61.js.map": "/citytrans/static/js/main.9a896e61.js.map"
   },
   "entrypoints": [
-    "static/css/main.2943624b.css",
+    "static/css/main.522109a3.css",
     "static/js/main.9a896e61.js"
   ]
 }
