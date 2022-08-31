@@ -1,0 +1,102 @@
+$blue: #2372d5;
+$bgColorBlue: #474d64b2;
+$white: #ffffff;
+
+.popup {
+    .menu {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+}
+.popup-background {
+    cursor: pointer;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $bgColorBlue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: appearance 0.5s forwards;
+    .window {
+        cursor: default;
+        display: flex;
+        flex-direction: column;
+        height: 60vh;
+        width: 40vw;
+        background: $white;
+        animation: slips 1s forwards;
+        &__header {
+            width: 100%;
+            height: 20%;
+            background-color: $blue;
+            .icon {
+                margin: 0 auto;
+                background: $white;
+                width: 60px;
+                height: 60px;
+                padding: 20px;
+                margin-top: -20px;
+                border-radius: 100px;
+            }
+        }
+        &__inputs {
+            padding: 30px;
+
+            .value {
+                font-size: 20px;
+                width: 100%;
+                border: 2px solid $blue;
+            }
+            .big-text {
+                font-size: 20px;
+                margin-top: 30px;
+                max-width: 100%;
+                min-width: 100%;
+                max-height: 30vh;
+                min-height: 30vh;
+                border: 2px solid $blue;
+            }
+        }
+    }
+}
+
+@keyframes appearance {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes slips {
+    0% {
+        transform: translateY(-150%);
+    }
+
+    30% {
+        transform: translateY(-150%);
+    }
+
+    60% {
+        transform: translateY(10%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+@media (max-width: 1250px) {
+    .popup-background {
+        .window {
+            height: 65vh;
+            min-height: 300px;
+            width: 80vw;
+        }
+    }
+}

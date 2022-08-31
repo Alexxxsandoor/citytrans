@@ -1,0 +1,201 @@
+$yellow: #fec438;
+$light-blue: #a6c5e8;
+$blue: #2372d5;
+$grey: #efefef;
+$cross-color: #6b6b6b;
+
+.design {
+    position: absolute;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+    .circle-1,
+    .circle-2,
+    .circle-3,
+    .circle-4 {
+        position: absolute;
+        border-radius: 50%;
+        -webkit-animation: shake 1s linear alternate-reverse infinite;
+        animation: shake 1s linear alternate-reverse infinite;
+    }
+    .circle-1 {
+        top: 15%;
+        right: 40%;
+        width: 4rem;
+        height: 4rem;
+        background-color: $yellow;
+    }
+    .circle-2 {
+        bottom: 0;
+        right: 30%;
+        width: 20rem;
+        height: 10rem;
+        border-radius: 30rem 30rem 0 0;
+        background: radial-gradient($grey 20%, transparent 40%) 0 0,
+            radial-gradient(#ffffff 1%, transparent 1%) 50px 50px;
+        background-size: 12px 12px;
+        -webkit-animation: none;
+        animation: none;
+    }
+    .circle-3 {
+        top: 80%;
+        left: 15%;
+        width: 3rem;
+        height: 3rem;
+        background-color: $yellow;
+    }
+    .circle-4 {
+        bottom: 15%;
+        right: 15%;
+        width: 6rem;
+        height: 6rem;
+
+        background-color: $light-blue;
+    }
+    .left-triangle {
+        width: 0;
+        height: 0;
+        border: 0 solid transparent;
+        border-bottom-width: 190px;
+        border-top-width: 0px;
+        border-left: 430px solid $blue;
+    }
+    .right-triangle {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        border: 0 solid transparent;
+        border-left-width: 270px;
+        border-right-width: 0px;
+        border-top: 300px solid $grey;
+    }
+    .strip {
+        z-index: -1;
+
+        position: absolute;
+        bottom: 0;
+        right: 55%;
+
+        height: 25rem;
+        width: 15rem;
+        background-color: $yellow;
+
+        -moz-transform: skew(55deg, 0deg);
+        -webkit-transform: skew(55deg, 0deg);
+        -o-transform: skew(55deg, 0deg);
+        -ms-transform: skew(55deg, 0deg);
+        transform: skew(55deg, 0deg);
+        clip-path: polygon(80% 0, 90% 0%, 90% 100%, 0% 100%);
+    }
+    .crosses {
+        position: absolute;
+        right: 10%;
+        display: flex;
+        .cross {
+            animation: 3s linear 0s normal none infinite running spin;
+            -webkit-animation: 3s linear 0s normal none infinite running spin;
+            margin-left: 30px;
+            border-radius: 10px;
+            width: 1em;
+            height: 1em;
+            background-color: $cross-color;
+            clip-path: polygon(
+                20% 0%,
+                0% 20%,
+                30% 50%,
+                0% 80%,
+                20% 100%,
+                50% 70%,
+                80% 100%,
+                100% 80%,
+                70% 50%,
+                100% 20%,
+                80% 0%,
+                50% 30%
+            );
+        }
+    }
+    .left-image {
+        z-index: 2;
+        background-image: url("../../image/bigIMG.png");
+        background-size: cover;
+        position: absolute;
+        clip-path: polygon(0% 0, 90% 0%, 100% 100%, 0% 100%);
+        height: 100vh;
+        clip-path: 10px;
+        width: 40vw;
+    }
+}
+.social {
+    z-index: 5;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 5%;
+    right: 10%;
+
+    width: 300px;
+
+    img {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes shake {
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 1000px) {
+    .design {
+        .left-triangle {
+            border-left: 60vw solid $blue;
+            border-bottom-width: 30vh;
+        }
+        .left-image {
+            display: none;
+        }
+        .strip {
+            -moz-transform: skew(40deg, 0deg);
+            -webkit-transform: skew(40deg, 0deg);
+            -o-transform: skew(40deg, 0deg);
+            -ms-transform: skew(40deg, 0deg);
+            width: 30vw;
+            transform: skew(40deg, 0deg);
+        }
+    }
+}
+@media (max-width: 300px) {
+    .design {
+        .right-triangle {
+            z-index: -1;
+        }
+        .left-triangle {
+            border-left: 80vw solid $blue;
+        }
+        .strip {
+            -moz-transform: skew(33deg, 0deg);
+            -webkit-transform: skew(33deg, 0deg);
+            -o-transform: skew(33deg, 0deg);
+            -ms-transform: skew(33deg, 0deg);
+            width: 30vw;
+            transform: skew(33deg, 0deg);
+        }
+    }
+    .social {
+        display: none;
+    }
+}
